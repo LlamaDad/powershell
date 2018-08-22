@@ -8,7 +8,7 @@ $Account = [Microsoft.VisualBasic.Interaction]::InputBox("Enter your UserID user
 $AccountPassword = Read-Host "Password" -AsSecureString
 
 #Store Password as a System Object
-$DBCreds = Now-Object System.Management.Automation.PSCredential($Account,$AccountPassword)
+$DBCreds = New-Object System.Management.Automation.PSCredential($Account,$AccountPassword)
 
 #Prompt for Credential Target Name
 $Target = [Microsoft.VisualBasic.Interaction]::InputBox("Enter the Credential Name", "Target")
